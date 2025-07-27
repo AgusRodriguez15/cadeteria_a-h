@@ -1,0 +1,161 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #4cb8d6;
+  padding: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.logo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+.servicios {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.servicios h2 {
+  color: #2a7a8c;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+article h3 {
+  background-color: #d0f0fa;
+  padding: 10px;
+  border-radius: 4px;
+  color: #007799;
+}
+
+/* Carrusel */
+.galeria-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 40px auto;
+  overflow: hidden;
+}
+
+.galeria-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+}
+
+.galeria-slide img {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Botones */
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.contacto {
+  background: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.contacto .icono {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #4cb8d6;
+  color: #000;
+  margin-top: 30px;
+}
+
+/* Responsive: celulares */
+@media screen and (max-width: 600px) {
+  .galeria-slide img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .logo {
+    width: 90%;
+  }
+
+  .servicios h2 {
+    font-size: 20px;
+  }
+
+  article h3 {
+    font-size: 16px;
+  }
+
+  .galeria-carousel {
+    padding: 0;
+  }
+}
+
+/* Responsive: computadoras */
+@media screen and (min-width: 601px) {
+  .galeria-slide img {
+    width: 80vw;
+    height: 60vh;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
+}
